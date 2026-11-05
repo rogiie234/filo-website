@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("/assets/fonts/Nunito.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --filo-background: #f9faf5;
+  --filo-surface: #ffffff;
+  --filo-primary: #236b57;
+  --filo-edge: #1a5444;
+  --filo-ink: #14423a;
+  --filo-secondary: #4f625a;
+  --filo-mint: #dce9da;
+  --filo-mascot-center: #e5efe3;
+  --filo-mascot-border: #236b5733;
+  --filo-selected: #cfe8dc;
+  --filo-border: #d9e2da;
+  --filo-control-border: #6e7e73;
+  --filo-tint: #f0f5f0;
+  --filo-lime: #e0f0a6;
+  --filo-on-primary: #ffffff;
+  --filo-on-accent: #14423a;
+  --filo-highlight: #e0f0a6;
+  --filo-feature-study: #eef2df;
+  --filo-team-section: #edf3e9;
+  --filo-font: "Nunito", system-ui, sans-serif;
+  --filo-space-4: 0.25rem;
+  --filo-space-8: 0.5rem;
+  --filo-space-12: 0.75rem;
+  --filo-space-16: 1rem;
+  --filo-space-20: 1.25rem;
+  --filo-space-24: 1.5rem;
+  --filo-space-32: 2rem;
+  --filo-space-40: 2.5rem;
+  --filo-radius-small: 0.75rem;
+  --filo-radius-medium: 1.25rem;
+  --filo-radius-large: 1.75rem;
+  --filo-radius-pill: 999px;
+  --filo-target-min: 3rem;
+  --filo-target-primary: 3.5rem;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --filo-background: #0f1a17;
+  --filo-surface: #16231f;
+  --filo-primary: #5cbf9b;
+  --filo-edge: #3a8f72;
+  --filo-ink: #e8f1eb;
+  --filo-secondary: #a9bdb3;
+  --filo-mint: #1f3a31;
+  --filo-mascot-center: #1d342d;
+  --filo-mascot-border: #5cbf9b33;
+  --filo-selected: #28483d;
+  --filo-border: #2b3f38;
+  --filo-control-border: #78978a;
+  --filo-tint: #1b2b26;
+  --filo-lime: #d4e69a;
+  --filo-on-primary: #06201a;
+  --filo-highlight: #34452a;
+  --filo-feature-study: #253324;
+  --filo-team-section: #14251e;
+}
+
+body {
+  margin: 0;
+  background: var(--filo-background);
+  color: var(--filo-ink);
+  font-family: var(--filo-font);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--filo-primary);
+  outline-offset: 4px;
+}
