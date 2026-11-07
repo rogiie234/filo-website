@@ -9,7 +9,7 @@ astro-slot {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
+  scroll-padding-top: 5.5rem;
 }
 
 img {
@@ -77,11 +77,24 @@ h3 {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: var(--filo-background);
+  background: color-mix(in srgb, var(--filo-background) 88%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid color-mix(in srgb, var(--filo-border) 70%, transparent);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding-block: 1.5rem;
+  padding-block: 1rem;
 }
 
 .brand {
@@ -257,7 +270,7 @@ nav a:hover,
   transform: translateY(-150%);
   padding: 1rem;
   background: var(--filo-surface);
-  z-index: 10;
+  z-index: 60;
 }
 
 .skip-link:focus {
@@ -984,6 +997,140 @@ nav a:hover,
   margin-top: 1.5rem;
 }
 
+.download-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.header-download-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.header-download-dropdown .header-cta {
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.header-download-dropdown .download-menu {
+  top: calc(100% + 0.6rem);
+  left: auto;
+  right: 0;
+}
+
+.download-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.download-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 160ms ease;
+}
+
+.download-dropdown[open] .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.download-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 60;
+  min-width: 20rem;
+  max-width: calc(100vw - 2rem);
+  background: var(--filo-surface);
+  border: 1px solid var(--filo-border);
+  border-radius: var(--filo-radius-medium);
+  box-shadow: 0 12px 28px rgba(20, 66, 58, 0.12);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.download-menu-header {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--filo-secondary);
+  padding: 0.4rem 0.75rem 0.25rem;
+}
+
+.download-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--filo-radius-small);
+  color: var(--filo-ink);
+  text-decoration: none;
+  transition: background 120ms ease;
+}
+
+.download-option:hover {
+  background: var(--filo-tint);
+  text-decoration: none;
+}
+
+.download-option .option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.download-option .option-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-option .option-title {
+  font-weight: 800;
+  font-size: 0.925rem;
+  color: var(--filo-ink);
+}
+
+.download-option:hover .option-title {
+  color: var(--filo-primary);
+}
+
+.download-option .option-desc {
+  font-size: 0.75rem;
+  color: var(--filo-secondary);
+  line-height: 1.3;
+}
+
+.download-option .option-size {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--filo-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .download-menu {
+    left: auto;
+    right: 0;
+    transform: none;
+    width: calc(100vw - 2.5rem);
+    max-width: 22rem;
+    min-width: auto;
+  }
+}
+
 .release-link {
   margin-top: 0;
   gap: 0.75rem;
@@ -1065,7 +1212,10 @@ nav a:hover,
 
 @media (max-width: 1000px) {
   .header-cta {
-    display: none;
+    font-size: .8rem;
+    padding: .5rem .875rem;
+    gap: .4rem;
+    min-height: 2.75rem;
   }
 
   .hero {
@@ -1112,14 +1262,18 @@ nav a:hover,
 }
 
 @media (max-width: 700px) {
+  html {
+    scroll-padding-top: 7rem;
+  }
+
   .section {
     padding-block: 4rem;
   }
 
-  .site-header {
+  .header-inner {
     flex-wrap: wrap;
     gap: .25rem 1rem;
-    padding-block: 1rem;
+    padding-block: .75rem;
   }
 
   .site-header nav {

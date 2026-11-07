@@ -21,7 +21,7 @@ const team = [
 ];
 const questions = [
   { question: "What is Filo?", answer: "Filo is an Android learning management app for students and instructors. It brings class materials, assignments, assessments, and AI-assisted study into one place. This website introduces the project." },
-  { question: "Can I download the app now?", answer: "Yes! You can download the preview APK directly using the button below. Release notes and updates are also available on our GitHub repository." },
+  { question: "Can I download the app now?", answer: "Yes! You can download the preview APK directly using the download button on this page. Release notes and updates are also available on our GitHub repository." },
   { question: "What can I use offline?", answer: "Downloaded files and saved study sets are intended for offline access in the app. Signing in, syncing, generating AI content, submitting work, and taking official quizzes or exams require an internet connection." },
   { question: "Can I use Filo in my browser?", answer: "Filo is being developed for Android. This is its public information website; classes and study tools are accessed in the app." },
   { question: "Does AI replace my instructor?", answer: "No. AI is a study aid and can make mistakes. Check answers against your source materials and ask your instructor when something needs clarification." },
@@ -52,21 +52,59 @@ const questions = [
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header wrap">
-      <a class="brand" href="#" aria-label="Filo home"><img class="brand-mark-light" src="/assets/brand/logo-mark-light.png" width="36" height="36" alt="" /><img class="brand-mark-dark" src="/assets/brand/logo-mark-dark.png" width="36" height="36" alt="" /><span>filo</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#features">Discover Filo</a>
-        <a href="#about">About us</a>
-        <a href="#team">Our team</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <div class="header-actions">
-        <button id="theme-toggle" class="theme-toggle" type="button" role="switch" aria-label="Dark mode" aria-checked="false" title="Switch to dark mode" hidden>
-          <span class="theme-thumb" aria-hidden="true"></span>
-          <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></svg>
-          <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z" /></svg>
-        </button>
-        <a class="button button-small header-cta" href="#availability">Meet your study space <span aria-hidden="true">↗</span></a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#" aria-label="Filo home"><img class="brand-mark-light" src="/assets/brand/logo-mark-light.png" width="36" height="36" alt="" /><img class="brand-mark-dark" src="/assets/brand/logo-mark-dark.png" width="36" height="36" alt="" /><span>filo</span></a>
+        <nav aria-label="Main navigation">
+          <a href="#features">Discover Filo</a>
+          <a href="#about">About us</a>
+          <a href="#team">Our team</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" type="button" role="switch" aria-label="Dark mode" aria-checked="false" title="Switch to dark mode" hidden>
+            <span class="theme-thumb" aria-hidden="true"></span>
+            <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></svg>
+            <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z" /></svg>
+          </button>
+          <details class="download-dropdown header-download-dropdown">
+            <summary class="button button-small header-cta">
+              <svg class="download-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+              <span>Download APK</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="download-menu header-download-menu">
+              <div class="download-menu-header">Choose APK build</div>
+              <a class="download-option" href="/releases/Filo-v0.1.0-preview.1-arm64.apk" download="Filo-v0.1.0-preview.1-arm64.apk">
+                <div class="option-text">
+                  <div class="option-title-row">
+                    <span class="option-title">New build (ARM64)</span>
+                  </div>
+                  <span class="option-desc">Modern Android 8.0+ devices · 64-bit</span>
+                </div>
+                <span class="option-size">68 MB <span aria-hidden="true">↓</span></span>
+              </a>
+              <a class="download-option" href="/releases/Filo-v0.1.0-preview.1-armv7.apk" download="Filo-v0.1.0-preview.1-armv7.apk">
+                <div class="option-text">
+                  <div class="option-title-row">
+                    <span class="option-title">Old build (ARMv7)</span>
+                  </div>
+                  <span class="option-desc">Older Android devices · 32-bit</span>
+                </div>
+                <span class="option-size">60 MB <span aria-hidden="true">↓</span></span>
+              </a>
+              <a class="download-option" href="/releases/Filo-v0.1.0-preview.1-x86_64.apk" download="Filo-v0.1.0-preview.1-x86_64.apk">
+                <div class="option-text">
+                  <div class="option-title-row">
+                    <span class="option-title">Emulator build (x86_64)</span>
+                  </div>
+                  <span class="option-desc">PC, tablets & Android emulators</span>
+                </div>
+                <span class="option-size">70 MB <span aria-hidden="true">↓</span></span>
+              </a>
+            </div>
+          </details>
+        </div>
       </div>
     </header>
 
@@ -126,7 +164,18 @@ const questions = [
 
       <section class="faq-section" id="faq" aria-labelledby="faq-title"><div class="wrap faq-layout"><Reveal client:load><p class="eyebrow">Good questions</p><TextReveal id="faq-title" lines={["A little more", "about Filo."]} client:visible /><p class="section-copy">Before your next discovery,<br />a few things worth knowing.</p></Reveal><Reveal className="faq-list" delay={0.1} client:load>{questions.map((item) => <details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</Reveal></div></section>
 
-      <section class="section wrap" id="availability" aria-labelledby="availability-title"><Reveal className="closing-panel" client:load><span class="closing-spark" aria-hidden="true">✳</span><p class="eyebrow">Ready to try Filo?</p><TextReveal id="availability-title" lines={["A new little home", "for your learning."]} client:visible /><p>Download the preview APK for Android to get started,<br />or explore the project and release notes on GitHub.</p><div class="release-actions"><a class="button release-link" href="/releases/Filo-v0.1.0-preview.1.apk" download="Filo-v0.1.0-preview.1.apk"><span>Download preview APK</span><svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg></a><a class="button button-secondary release-github-link" href="https://github.com/rogiie234/filo-app" target="_blank" rel="noopener noreferrer"><svg class="github-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg><span>Explore on GitHub</span><span class="external-arrow" aria-hidden="true">↗</span></a></div><p class="quiet-note release-note">Filo v0.1.0-preview.1 · Requires Android 8.0 or later</p></Reveal></section>
+      <section class="section wrap" id="availability" aria-labelledby="availability-title">
+        <Reveal className="closing-panel" client:load>
+          <span class="closing-spark" aria-hidden="true">✳</span>
+          <p class="eyebrow">Explore the project</p>
+          <TextReveal id="availability-title" lines={["A new little home", "for your learning."]} client:visible />
+          <p>Explore the project, browse source code,<br />and follow release updates on GitHub.</p>
+          <div class="release-actions">
+            <a class="button release-github-link" href="https://github.com/rogiie234/filo-app" target="_blank" rel="noopener noreferrer"><svg class="github-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg><span>Explore on GitHub</span><span class="external-arrow" aria-hidden="true">↗</span></a>
+          </div>
+          <p class="quiet-note release-note">Filo v0.1.0-preview.1 · Open-source Android learning app</p>
+        </Reveal>
+      </section>
     </main>
 
     <footer class="site-footer wrap"><div><a class="brand" href="#" aria-label="Filo home"><img class="brand-mark-light" src="/assets/brand/logo-mark-light.png" width="36" height="36" alt="" /><img class="brand-mark-dark" src="/assets/brand/logo-mark-dark.png" width="36" height="36" alt="" /><span>filo</span></a><p>A little more room to learn.</p></div><nav aria-label="Footer navigation"><a href="#features">Discover</a><a href="#about">About us</a><a href="#team">Our team</a><a href="#faq">FAQ</a></nav><p class="footer-note">Learning, together.<br />An Android learning app project.</p></footer>
@@ -140,6 +189,16 @@ const questions = [
           applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
         });
       }
+
+      document.addEventListener("click", (e) => {
+        const target = e.target;
+        if (!(target instanceof Element)) return;
+        document.querySelectorAll("details.download-dropdown[open]").forEach((details) => {
+          if (!details.contains(target) || target.closest(".download-option")) {
+            details.removeAttribute("open");
+          }
+        });
+      });
     </script>
   </body>
 </html>
