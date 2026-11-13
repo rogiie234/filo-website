@@ -51,6 +51,16 @@ const questions = [
     <title>Filo — Learning, together.</title>
   </head>
   <body>
+    <svg class="entry-background" aria-hidden="true" focusable="false" width="100%" height="100%">
+      <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" fill="var(--filo-mint)">
+        <path opacity=".48" d="M35 0C60 10 80 2 100 16V0Z" />
+        <path opacity=".65" d="M0 82C22 77 32 92 57 86C80 80 84 76 100 80V100H0Z" />
+        <path opacity=".7" d="M0 86C24 80 40 83 62 89C82 94 94 88 100 88V100H0Z" />
+      </svg>
+      <defs><g id="entry-sprig" fill="currentColor"><path d="M0 0C-30-12-30-37-24-38C-7-35-4-15 0 0M2-20C-6-41 5-65 16-67C23-48 14-29 2-20M2-4C8-25 25-32 37-27C31-9 15-3 2-4" /><path d="M0 2Q-1-12 5-32" fill="none" stroke="currentColor" stroke-width="1.5" /></g></defs>
+      <svg x="3%" y="73%" width="80" height="110" viewBox="-35 -75 80 110"><use href="#entry-sprig" /></svg>
+      <svg x="88%" y="80%" width="60" height="83" viewBox="-40 -75 80 110"><use href="#entry-sprig" transform="scale(-1 1)" /></svg>
+    </svg>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap header-inner">
@@ -67,43 +77,6 @@ const questions = [
             <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></svg>
             <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z" /></svg>
           </button>
-          <details class="download-dropdown header-download-dropdown">
-            <summary class="button button-small header-cta">
-              <svg class="download-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
-              <span>Download APK</span>
-              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
-            </summary>
-            <div class="download-menu header-download-menu">
-              <div class="download-menu-header">Choose APK build</div>
-              <a class="download-option" href="/releases/Filo-v0.1.0-preview.1-arm64.apk" download="Filo-v0.1.0-preview.1-arm64.apk">
-                <div class="option-text">
-                  <div class="option-title-row">
-                    <span class="option-title">New build (ARM64)</span>
-                  </div>
-                  <span class="option-desc">Modern Android 8.0+ devices · 64-bit</span>
-                </div>
-                <span class="option-size">68 MB <span aria-hidden="true">↓</span></span>
-              </a>
-              <a class="download-option" href="/releases/Filo-v0.1.0-preview.1-armv7.apk" download="Filo-v0.1.0-preview.1-armv7.apk">
-                <div class="option-text">
-                  <div class="option-title-row">
-                    <span class="option-title">Old build (ARMv7)</span>
-                  </div>
-                  <span class="option-desc">Older Android devices · 32-bit</span>
-                </div>
-                <span class="option-size">60 MB <span aria-hidden="true">↓</span></span>
-              </a>
-              <a class="download-option" href="/releases/Filo-v0.1.0-preview.1-x86_64.apk" download="Filo-v0.1.0-preview.1-x86_64.apk">
-                <div class="option-text">
-                  <div class="option-title-row">
-                    <span class="option-title">Emulator build (x86_64)</span>
-                  </div>
-                  <span class="option-desc">PC, tablets & Android emulators</span>
-                </div>
-                <span class="option-size">70 MB <span aria-hidden="true">↓</span></span>
-              </a>
-            </div>
-          </details>
         </div>
       </div>
     </header>
@@ -116,7 +89,7 @@ const questions = [
           <h1 id="hero-title">Learning,<br /><span class="highlight">together.</span></h1>
           <p class="hero-description">Your classes. Your notes. Your next discovery.<br class="desktop-break" /> A calmer place to bring it all together.</p>
           <div class="hero-actions">
-            <a class="button" href="#features">Take a look around <span aria-hidden="true">↗</span></a>
+            <a class="button release-link" href="/releases/Filo-preview.apk" download="Filo-preview.apk"><span>Download APK</span><svg class="download-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" /></svg></a>
             <a class="text-link" href="#about">The story behind Filo <span aria-hidden="true">→</span></a>
           </div>
           <p class="availability-note"><span aria-hidden="true">◌</span> Made for Android · Preview APK available</p>
@@ -190,15 +163,6 @@ const questions = [
         });
       }
 
-      document.addEventListener("click", (e) => {
-        const target = e.target;
-        if (!(target instanceof Element)) return;
-        document.querySelectorAll("details.download-dropdown[open]").forEach((details) => {
-          if (!details.contains(target) || target.closest(".download-option")) {
-            details.removeAttribute("open");
-          }
-        });
-      });
     </script>
   </body>
 </html>

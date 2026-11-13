@@ -1,3 +1,7 @@
+## Current download and responsive layout (13 November 2026)
+
+The hero has a direct Download APK link to `/releases/Filo-preview.apk`; there is no architecture chooser or header download. Only the newer existing ARM64 release APK is hosted. The button deliberately omits architecture text. The mobile hero heading scales to its viewport and the page uses static mint waves/leaves adapted from the app EntryBackground painter. Original PNG mascots and existing appearance switching remain. Owner browser, hosted download and phone acceptance are pending; older download descriptions below are historical and superseded by this section. No APK rebuild was performed.
+
 # Filo public website
 
 Prepared 5 November 2026 (Asia/Manila). Standalone public website, separate from `../filo-app/`. The homepage uses Astro, TypeScript, React/Motion reveal islands and plain CSS. It introduces the project; it does not connect to app accounts, classes or Supabase.
