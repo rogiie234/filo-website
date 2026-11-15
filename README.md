@@ -1,3 +1,6 @@
+## ARM64 preview refresh (15 November 2026)
+
+Rebuilt the current uncommitted app working copy using the existing DEV configuration and release signing: ARM64 only, version 0.1.0+1. Flutter release build succeeded (381 seconds). Replaced public/releases/Filo-preview.apk (91,965,867 bytes); archive contains only lib/arm64-v8a/libflutter.so, and source/copy SHA-256 agree: 372BC3989E0FA2952086D2E9B2D0EAAEBE62250BE41682D7171B672BEB4BF71A. This supersedes the 13 November artifact/hash below. Existing download URL, layout and LFS policy retained. Build warnings: future Kotlin plugin compatibility for firebase_core/workmanager_android and missing Cupertino icon font family. Build success is packaging evidence; owner installation/update, sign-in, icons and hosted download acceptance remain pending. No tests, website build/browser checks, push or deployment performed.
 ## Current download and responsive layout (13 November 2026)
 
 The hero has a direct Download APK link to `/releases/Filo-preview.apk`; there is no architecture chooser or header download. Only the newer existing ARM64 release APK is hosted. The button deliberately omits architecture text. The mobile hero heading scales to its viewport and the page uses static mint waves/leaves adapted from the app EntryBackground painter. Original PNG mascots and existing appearance switching remain. Owner browser, hosted download and phone acceptance are pending; older download descriptions below are historical and superseded by this section. No APK rebuild was performed.
@@ -93,3 +96,4 @@ The app's restrained timing informed the short button feedback and 250ms mascot 
 ## Review status
 
 No tests, analyzer, build, browser run or deployment performed. Owner visual review is pending. Canonical scope, Done when and remaining checks: `../qa/WEBSITE-ACCEPTANCE.md`. No Git repository was created and no app files were changed. Dependencies/build artifacts are locally ignored; no disposable screenshots or testing scripts were created.
+
