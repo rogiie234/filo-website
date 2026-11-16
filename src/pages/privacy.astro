@@ -1,0 +1,27 @@
+---
+import PolicyLayout from "../layouts/PolicyLayout.astro";
+---
+<PolicyLayout title="Privacy policy" description="How Filo handles account information, class records, optional Google Drive backup and AI-assisted study requests.">
+  <p>This policy explains how the Filo project team handles information in the Filo Android learning app and this public website.</p>
+  <h2>Information Filo handles</h2>
+  <p>Filo collects your name, email address, profile photo, school and selected role to set up your account. It stores class activity, including membership, posts, assessments, submissions, grades and counts of leaving the app during exams. Device and login verification information helps protect account access.</p>
+  <p>Files downloaded or imported into Filo and saved study materials are stored on your device. Content you submit or share with a class is sent to Filo's backend to provide that class feature.</p>
+  <h2>How information is used and shared</h2>
+  <p>Information is used to provide accounts, classes, learning materials, assessments, synchronization and account protection. Students can see their own grades; instructors can access records for their own classes. Content you share in a class is available according to that class's roles and permissions.</p>
+  <p>Filo uses service providers, including Supabase for backend services and Google for sign-in, optional Drive backup and Gemini processing. These providers process the information needed for the features you use under their applicable terms and privacy policies.</p>
+  <h2>Google sign-in and optional Drive backup</h2>
+  <p>Google sign-in supplies identity information for your Filo account. Drive backup is optional and asks separately for permission to create and manage the backup files Filo creates in your Google Drive, using the <code>drive.file</code> scope. This permission does not give Filo access to all your Drive files.</p>
+  <p>When you turn backup on, Filo uploads local library files to a Filo Backup folder in your own Google Drive. Backup uses the same Google account you use to sign in to Filo. Google access tokens authorize requests to Google; the Drive integration does not send those tokens to Filo's Supabase backend.</p>
+  <p>Turning backup off pauses further uploads. Deleting a file from your phone or deleting your Filo account does not delete existing Drive copies. You can remove those copies in Google Drive and revoke Filo's access through your Google Account connections settings.</p>
+  <h2>AI-assisted features</h2>
+  <p>When you use AI features, your requests and relevant text, including text from learning materials you select, are sent to Google for processing with Gemini. Source text is not automatically anonymized. Avoid sending passwords, student names or other sensitive personal information. Google's applicable service terms govern its processing, including the terms of the configured API tier.</p>
+  <h2>Retention, account deletion and your choices</h2>
+  <p>You can review your profile, choose whether to enable Drive backup and choose whether to use AI features. You can request account deletion in Filo's settings. Instructors must first delete the classes they own, including archived classes.</p>
+  <p>Account deletion removes your name, email address and profile photo, ends class membership and removes downloaded files stored in Filo on that device. Your submissions and grades remain in your instructors' records as Deleted User. If device cleanup fails, Filo asks you to retry. Existing Google Drive backups remain under your control in Drive.</p>
+  <p>Uninstalling Filo or clearing its app data can remove local files and study materials. Keep a separate copy of important work. This policy does not promise immediate deletion of every historical service-provider backup.</p>
+  <h2>This website</h2>
+  <p>This website introduces Filo and provides downloads and project information. It has no account sign-in, advertising trackers or analytics integrations added by Filo. The homepage stores your appearance preference locally in your browser. The website hosting provider may process ordinary request information, such as IP addresses, to deliver and protect the site. Links to Google or GitHub are subject to those services' policies.</p>
+  <h2>Questions and policy updates</h2>
+  <p>For a privacy concern, contact the Filo project team through the contact details provided with your app or by your school. You can also find the team through the <a href="https://github.com/rogiie234/filo-app">Filo project repository</a>; do not post private account, class or student information in public issues.</p>
+  <p>Updates will appear on this page with a revised date. See also our <a href="/terms">Terms of service</a>.</p>
+</PolicyLayout>

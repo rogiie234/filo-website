@@ -1,0 +1,48 @@
+---
+import "../styles/brand.css";
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f9faf5" />
+    <link rel="icon" type="image/png" href="/assets/brand/logo-mark-light.png" />
+    <title>{title} | Filo</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header><a class="brand" href="/" aria-label="Filo home"><img src="/assets/brand/logo-mark-light.png" width="40" height="40" alt="" />filo</a><a href="/">Back to home</a></header>
+    <main id="main" tabindex="-1">
+      <p class="eyebrow">Learning, together.</p>
+      <h1>{title}</h1>
+      <p class="updated">Last updated: 16 November 2026</p>
+      <article><slot /></article>
+    </main>
+    <footer><nav aria-label="Policy navigation"><a href="/">Home</a><a href="/privacy">Privacy policy</a><a href="/terms">Terms of service</a></nav><p>Filo · An Android learning app project.</p></footer>
+  </body>
+</html>
+<style>
+  :global(body) { margin: 0; background: var(--filo-background); color: var(--filo-ink); font-family: "Nunito", sans-serif; line-height: 1.7; }
+  header, main, footer { width: min(48rem, calc(100% - 3rem)); margin-inline: auto; }
+  header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; border-bottom: 1px solid var(--filo-border); }
+  a { color: var(--filo-primary); text-underline-offset: .2em; overflow-wrap: anywhere; }
+  header a, nav a { display: inline-flex; align-items: center; min-height: 3rem; }
+  .brand { gap: .5rem; font-size: 1.75rem; font-weight: 900; text-decoration: none; }
+  main { padding-block: 3rem; }
+  h1 { font-size: clamp(2rem, 7vw, 3.5rem); line-height: 1.15; margin-block: .5rem 1rem; }
+  .eyebrow, .updated { color: var(--filo-secondary); }
+  .eyebrow { font-weight: 800; }
+  article { margin-top: 2.5rem; font-size: 1.0625rem; overflow-wrap: anywhere; }
+  article :global(h2) { font-size: 1.5rem; line-height: 1.35; margin-top: 2.5rem; }
+  article :global(li) { margin-block: .5rem; }
+  article :global(a) { color: var(--filo-primary); text-underline-offset: .2em; }
+  footer { border-top: 1px solid var(--filo-border); padding-block: 1.5rem 2.5rem; color: var(--filo-secondary); }
+  nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+  :global(a:focus-visible) { outline: 3px solid var(--filo-primary); outline-offset: 4px; border-radius: .25rem; }
+  .skip { position: absolute; left: 1.5rem; top: -8rem; padding: .75rem; background: var(--filo-surface); }
+  .skip:focus { top: .5rem; }
+</style>

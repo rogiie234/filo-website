@@ -1,3 +1,9 @@
+## Public policies (16 November 2026)
+
+Added static `/privacy` and `/terms` pages, linked from the homepage footer and each other. They use the existing Nunito/green tokens, default light theme, semantic headings and keyboard links without JavaScript or a login requirement. Privacy text is based on the current in-app notice, Drive permission/backup code and account-deletion wording; terms were prepared at the owner's request around current features. Owner content approval, a direct public support/privacy email and the actual hosting origin remain pending. No legal/compliance certification is implied.
+
+After deployment, Google Branding should use the live homepage URL, that same origin plus `/privacy`, and that same origin plus `/terms`. Do not use localhost or repository source URLs. Existing hosting workflow is retained; no push/deployment was performed. Owner checks are in `../qa/WEBSITE-ACCEPTANCE.md` (outside this repository). No tests, builds or browser checks were run.
+
 ## ARM64 preview refresh (15 November 2026)
 
 Rebuilt the current uncommitted app working copy using the existing DEV configuration and release signing: ARM64 only, version 0.1.0+1. Flutter release build succeeded (381 seconds). Replaced public/releases/Filo-preview.apk (91,965,867 bytes); archive contains only lib/arm64-v8a/libflutter.so, and source/copy SHA-256 agree: 372BC3989E0FA2952086D2E9B2D0EAAEBE62250BE41682D7171B672BEB4BF71A. This supersedes the 13 November artifact/hash below. Existing download URL, layout and LFS policy retained. Build warnings: future Kotlin plugin compatibility for firebase_core/workmanager_android and missing Cupertino icon font family. Build success is packaging evidence; owner installation/update, sign-in, icons and hosted download acceptance remain pending. No tests, website build/browser checks, push or deployment performed.
