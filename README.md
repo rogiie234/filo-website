@@ -103,3 +103,7 @@ The app's restrained timing informed the short button feedback and 250ms mascot 
 
 No tests, analyzer, build, browser run or deployment performed. Owner visual review is pending. Canonical scope, Done when and remaining checks: `../qa/WEBSITE-ACCEPTANCE.md`. No Git repository was created and no app files were changed. Dependencies/build artifacts are locally ignored; no disposable screenshots or testing scripts were created.
 
+## Google site ownership verification (16 November 2026)
+
+The owner-supplied Search Console HTML verification file is preserved byte-for-byte at `public/googledbaa686e0ff57602.html`. Astro copies public assets to the site root. After publishing, open `https://filo-website.onrender.com/googledbaa686e0ff57602.html` and confirm the Google verification text, then select Verify in Search Console using the account associated with the Cloud project. Keep this file deployed after verification. Local file/hash inspection is not hosted or Google acceptance evidence; deployment and verification remain owner checks.
+
