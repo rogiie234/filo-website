@@ -1,3 +1,7 @@
+## Tutorial ARM64 split APK refresh (18 November 2026)
+
+Rebuilt current app working copy, including guided tutorial, with existing DEV configuration/release signing, version0.1.0+1. Final command uses `flutter build apk --release --target-platform android-arm64 --split-per-abi --dart-define-from-file=.env.dev.json --no-pub`. Gradle succeeded in160.8seconds. `public/releases/Filo-preview.apk` is73,374,246bytes; all native libraries are arm64-v8a, Android signature verification succeeded, and source/copy SHA-256 match: 9AFB100E84233A64EDEAB5CC17025012D75C72E0E88684F8C11CC6C6B92EA248. This supersedes the earlier 18 November artifact below. Download URL unchanged. Existing Kotlin-plugin/Cupertino-font warnings remain. Packaging evidence only; phone/runtime/hosted acceptance pending. No push/deploy or tests for this rebuild.
+
 ## ARM64 preview refresh (18 November 2026)
 
 Rebuilt with existing DEV public backend configuration and release signing, ARM64 only, version 0.1.0+1. Build succeeded in 523.4 seconds. Replaced public/releases/Filo-preview.apk (91967151 bytes), SHA-256 706D5ED9D5FBC1F9938EAC1233D316160E286A2A3AF82BA2C6289EFBF06027DE; matching source/copy hashes and ARM64 Flutter engine archive entry inspected. Existing Download APK button URL retained. Supersedes the 15 November artifact. No private backend keys included. Existing Kotlin plugin and Cupertino font warnings remain. Owner phone/hosted download acceptance pending; tests not run.
