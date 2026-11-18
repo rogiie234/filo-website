@@ -1,3 +1,7 @@
+## ARM64 preview refresh (18 November 2026)
+
+Rebuilt with existing DEV public backend configuration and release signing, ARM64 only, version 0.1.0+1. Build succeeded in 523.4 seconds. Replaced public/releases/Filo-preview.apk (91967151 bytes), SHA-256 706D5ED9D5FBC1F9938EAC1233D316160E286A2A3AF82BA2C6289EFBF06027DE; matching source/copy hashes and ARM64 Flutter engine archive entry inspected. Existing Download APK button URL retained. Supersedes the 15 November artifact. No private backend keys included. Existing Kotlin plugin and Cupertino font warnings remain. Owner phone/hosted download acceptance pending; tests not run.
+
 ## Public policies (16 November 2026)
 
 Added static `/privacy` and `/terms` pages, linked from the homepage footer and each other. They use the existing Nunito/green tokens, default light theme, semantic headings and keyboard links without JavaScript or a login requirement. Privacy text is based on the current in-app notice, Drive permission/backup code and account-deletion wording; terms were prepared at the owner's request around current features. Owner content approval, a direct public support/privacy email and the actual hosting origin remain pending. No legal/compliance certification is implied.
